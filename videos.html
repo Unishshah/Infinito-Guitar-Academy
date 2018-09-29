@@ -64,7 +64,7 @@
   <div class="row">
       <div class="col-md-12">
           <h1>Tere Bin Nahi | Naina</h1>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YIjVcz3u7MQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe id="idIframe" onload="iframeLoaded()" src="https://www.youtube.com/embed/YIjVcz3u7MQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <h1>Soch Na Sake | Airlift</h1>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/Gm_96n3HrCY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <h1>Akhiyanu Nu Rain De </h1>
@@ -90,6 +90,20 @@
             </div>
             </div>
         </div>
-        
+         <script type="text/javascript">
+            var myVar = setInterval(iframeLoaded, 1000);
+  function iframeLoaded() {
+      var iFrameID = document.getElementById('idIframe');
+      if(iFrameID && window.innerHeight<600) {
+          
+            // here you can make the height, I delete it first, then I make it again
+            iFrameID.height = "";
+            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+      }   else{
+      iFrameID.width = 560;
+      iFrameID.height = 315;
+  }
+  }
+        </script>
     </body>
 </html>
