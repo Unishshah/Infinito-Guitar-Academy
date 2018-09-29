@@ -45,7 +45,8 @@ html, body { overflow-x: hidden; background-color: lightgray;}
     .smallnavbar
 {
      width: auto;
-    opacity: 0.8;
+    opacity: 1.0;
+	color: white;
     height: 50px;
     background-color: black;
     font-family:sans-serif;
